@@ -78,6 +78,10 @@ face (`cable_route.column_face`), not on the symbol; high-bay lamp hung under tr
 - **No estimates.** A circuit whose loads are not on the plans (label missing, device not located, coordinates
   can't be matched) stays blank in AA..AD with `TQ: chưa tính - <reason>` in the remark (AL). Only numbers
   measured from drawings go in.
+- **Assign a device to a circuit only on evidence from the drawing**: its own circuit label, or a wiring line
+  drawn to it. Never "nearest label wins" - devices with no label near them go to the TQ list (count + area),
+  not into the closest circuit. (Project 1: an exit circuit picked up 15 unlabelled fittings of the next
+  building this way and came out at twice the BOQ.)
 - Never overwrite values the user entered; never edit the user's verified files - back up first
   (`fill_sol.ps1` does).
 
@@ -94,6 +98,8 @@ dialog (WM_CLOSE) before COM works, delete stale `.dwl/.dwl2` after a kill.
   on each drawing (layer, kind, points; blocks as extents box + name) - used for symbol centres.
 - Drawings of one building are often in different coordinate frames: align by the grid bubbles
   (`cable_route.offset(stem, ref)`, translation only). Check the offset on two grids before trusting it.
+- Adjacent sheets overlap at the shared grid line, so the same device appears on both. After aligning, merge the
+  device lists with `cable_route.dedupe(pts, tol=100)` - project 1 counted 13 exit fittings twice without it.
 
 ## 4. Route and compute
 
@@ -111,8 +117,15 @@ Per building write a small zone module + jobs script (see `references/example_pr
 then one job per SOL row. Then an assemble step (`example_projectA/assemble.py`) -> `fill_plan.json`
 `{row: {AA, AB, AC, AD, note} | {TQ}}`, and a split step (`split_draw.py`) -> per-drawing TSVs + `draw_plan.json`.
 
-**Do one circuit first and show it to the user** (picture via `scripts/cad/render_route.py` or a screenshot)
-before running all - the first project's rules came out of that review.
+**Do one circuit of each type first and show it to the user** (lighting row, exit/emergency chain, sockets,
+power box, feeder - picture via `scripts/cad/render_route.py` or a screenshot) before running all - the first
+project's rules came out of that review, and the one type not shown (exit) is where its biggest error hid.
+
+**Check device counts before writing.** Print the number of devices per circuit and the total per building
+and device type; compare with the `cad-qto` count (and the SLD / BOQ where they give one). A mismatch or a
+circuit with far more devices than its neighbours -> stop and look, don't write it. After writing, compare the
+cable totals per building with the BOQ: a type at ~2x the BOQ usually means double-counted or misassigned
+devices.
 
 ## 5. Write and draw
 

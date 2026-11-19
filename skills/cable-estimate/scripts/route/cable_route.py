@@ -148,6 +148,18 @@ def plen(pts):
     return sum(math.dist(p, q) for p, q in zip(pts, pts[1:]))
 
 
+def dedupe(pts, tol=100):
+    """Merge devices closer than tol mm - adjacent sheets both draw the strip at their shared grid line."""
+    out = []
+    for p in pts:
+        if all(math.dist(p, q) >= tol for q in out):
+            out.append(p)
+    return out
+
+
+assert dedupe([(0, 0), (1, 1), (500, 0)]) == [(0, 0), (500, 0)]
+
+
 def column_face(stem, centre, sym_half=700, reach=2500):
     """Wall/column-mounted device (power box, typical detail 4): the cable ends on the face of the steel
     column it is bolted to. Returns the point on the nearest column face at the device's y (same frame as
