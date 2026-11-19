@@ -1,0 +1,7 @@
+{
+  "name": "electrical-mep-engineer",
+  "description": "Electrical MEP Engineer: tender take-off toolkit for electrical/ELV CAD drawings - device QTO (cad-qto), Schedule of Load from SLDs (schedule-of-load), cable routing and length estimate (cable-estimate), and 3D models/renders from 2D drawings (cad-3d-render). Built for progeCAD + Excel on Windows.",
+  "version": "1.0.0",
+  "keywords": ["electrical", "mep", "qto", "boq", "schedule-of-load", "cable", "cad", "progecad", "dwg"],
+  "license": "MIT"
+}

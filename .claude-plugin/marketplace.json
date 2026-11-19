@@ -1,0 +1,5 @@
+{
+  "name": "electrical-mep-engineer",
+  "owner": { "name": "henrydang272" },
+  "plugins": [ { "name": "electrical-mep-engineer", "source": "./", "description": "Electrical / ELV tender take-off skills: device QTO, Schedule of Load, cable estimate, 3D render from CAD drawings." } ]
+}

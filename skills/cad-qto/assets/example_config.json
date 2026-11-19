@@ -1,0 +1,654 @@
+{
+ "_comment": "Trimmed from the MASCOT GIA LAI config (233 block rules there). Block rules were exact family/type matches built from the inventory; FA detectors and exit/emergency lights came in as extra CSVs from project-specific detectors.",
+ "project": "MASCOT GIA LAI (VN2904) — Điện & điện nhẹ",
+ "title": "BẢNG BÓC KHỐI LƯỢNG THIẾT BỊ ĐIỆN & ĐIỆN NHẸ — MASCOT GIA LAI (VN2904)",
+ "workdir": "C:/qto/<project>",
+ "output_xlsx": "<project>_Bang_boc_khoi_luong_thiet_bi.xlsx",
+ "legend_sheet": "VN2904-HAS-XX-XX-DR-E-0001",
+ "sheet_name_regex": "^VN2904-(?P<org>[A-Z]{3})-(?P<zone>[0-9A-Z]{2,3})-(?P<level>[0-9A-Z]{2})-DR-E-(?P<series>[0-9.]+)",
+ "zones": {
+  "00": "00 - Master Plan / Ngoài nhà",
+  "01": "01 - Workshop (Nhà xưởng)",
+  "02": "02 - Warehouse (Nhà kho)",
+  "03": "03 - Utility (Nhà phụ trợ)",
+  "04A": "04A - Guard House A",
+  "04B": "04B - Guard House B",
+  "04C": "04C - Guard House C",
+  "XX": "XX - Chung / Typical"
+ },
+ "levels": {
+  "00": "Tầng trệt / Ground",
+  "01": "Tầng 1 / Level 1",
+  "02": "Tầng 2 / Level 2",
+  "RF": "Tầng mái / Roof",
+  "ZZ": "Nhiều tầng / Multi-level",
+  "XX": "Chung / Typical"
+ },
+ "systems_by_folder": {
+  "Lighting": "Lighting (Chiếu sáng)",
+  "EX&EM": "Exit & Emergency (Thoát hiểm, khẩn cấp)",
+  "Socket": "Socket (Ổ cắm / Cấp nguồn)",
+  "Earthing": "Earthing & Lightning (Tiếp địa, chống sét)",
+  "FA": "Fire Alarm (Báo cháy)",
+  "LV Tray": "LV Tray (Máng cáp động lực)",
+  "General": "General (SLD, tủ điện, ghi chú)",
+  "ELV\\CCTV": "CCTV (Camera)",
+  "ELV\\Data": "Data (Mạng)",
+  "ELV\\PA": "PA (Âm thanh công cộng)",
+  "ELV\\ELV Tray": "ELV Tray (Máng cáp điện nhẹ)"
+ },
+ "systems_by_series": {
+  "21": "LV Tray (Máng cáp động lực)",
+  "22": "Socket (Ổ cắm / Cấp nguồn)",
+  "23": "Lighting & EX/EM (Chiếu sáng, thoát hiểm)",
+  "24": "Earthing & Lightning (Tiếp địa, chống sét)",
+  "25": "Fire Alarm (Báo cháy)",
+  "26": "Data (Mạng)",
+  "27": "CCTV (Camera)",
+  "28": "PA (Âm thanh công cộng)",
+  "29": "ELV Tray (Máng cáp điện nhẹ)"
+ },
+ "sheet_roles": [
+  {
+   "file": "~|MSB|Main Single Line|General notes",
+   "role": "schedule"
+  },
+  {
+   "zone": "XX",
+   "series": "^1",
+   "role": "legend"
+  },
+  {
+   "series": "^1",
+   "role": "schedule"
+  },
+  {
+   "series": "^6",
+   "role": "detail"
+  },
+  {
+   "zone": "XX",
+   "level": "XX",
+   "role": "legend"
+  },
+  {
+   "series": "^00",
+   "role": "detail"
+  }
+ ],
+ "legend": {
+  "SW2": {
+   "vi": "CÔNG TẮC ĐÔI, 1 CHIỀU 15A - 230VAC (H=+1.2m)",
+   "en": ""
+  },
+  "SW1": {
+   "vi": "CÔNG TẮC ĐƠN, 1 CHIỀU 15A - 230VAC (H=+1.2m)",
+   "en": ""
+  },
+  "SW3": {
+   "vi": "CÔNG TẮC BA, 1 CHIỀU 15A - 230VAC (H=+1.2m)",
+   "en": ""
+  },
+  "SWA": {
+   "vi": "CÔNG TẮC ĐƠN, 2 CHIỀU 10A - 230VAC (H=+1.2m)",
+   "en": ""
+  },
+  "DL": {
+   "vi": "HÔP NỐI DÂY, KẾT NỐI VỚI THIẾT BỊ SÀN NÂNG JUNCTION BOX CONNECT WITH EQUIPMENT DOCK LEVELER",
+   "en": ""
+  },
+  "ISW": {
+   "vi": "CÔNG TẮC CÁCH LY, 1 CHIỀU 2P 15A - 230VAC (H=+1.2m)",
+   "en": ""
+  },
+  "LH1": {
+   "vi": "ĐÈN CAO ÁP BÓNG LED 154W, 21000 LUMEN, TIA CHIẾU HẸP, NHIỆT ĐỘ MÀU 6500K, IP65, NGUỒN CUNG CẤP 220V AC/50HZ.",
+   "en": ""
+  },
+  "LR1": {
+   "vi": "ĐÈN LED TẤM 30.7W, 4000 LUMEN, LẮP ÂM TRẦN, NHIỆT ĐỘ MÀU 4000K, IP20, NGUỒN CUNG CẤP 220V/50HZ, KHUNG 600X600mm. 30.",
+   "en": ""
+  },
+  "LW1": {
+   "vi": "ĐÈN CHỐNG NƯỚC LED 28.6W, 4000 LUMEN, DÀI 1215mm, LẮP NỔI, NHIỆT ĐỘ MÀU 6500K, IP65, NGUỒN CẤP 220V AC/50HZ 28.",
+   "en": ""
+  },
+  "D1": {
+   "vi": "ĐÈN DOWNLIGHT BÓNG LED 13W, 1200 LUMEN, LẮP ÂM TRẦN KÈM NẮP POLYCARBONATE, NHIỆT ĐỘ MÀU 6500K, IP20, NGUỒN CẤP 220V AC/50HZ.",
+   "en": ""
+  },
+  "R1": {
+   "vi": "ĐÈN ĐƯỜNG BÓNG LED 90W, 14300 LUMEN, 4000K, LẮP TRÊN TRỤ, IP66, DÃY ĐIỆN ÁP HOẠT ĐỘNG RỘNG 100-240VAC.",
+   "en": ""
+  },
+  "S8": {
+   "vi": "Ổ CẮM CÔNG NGHIỆP 3 PHA 32A-380V, 4P+E, 32A-380V, 4P+E, INDUSTRIAL SOCKET OUTLET",
+   "en": ""
+  },
+  "LN1": {
+   "vi": "ĐÈN BATTEN LED 29W, 4100 LUMEN, LẮP NỔI, NHIỆT ĐỘ MÀU 6500K, IP20, NGUỒN CẤP 220V AC/50HZ.",
+   "en": ""
+  },
+  "D2": {
+   "vi": "ĐÈN DOWNLIGHT BÓNG LED 20W, 2000 LUMEN, LẮP ÂM TRẦN KÈM NẮP POLYCARBONATE, NHIỆT ĐỘ MÀU 6500K, IP20, NGUỒN CẤP 220V AC/50HZ.",
+   "en": ""
+  },
+  "LH2": {
+   "vi": "ĐÈN CAO ÁP BÓNG LED 154W, 21000 LUMEN, TIA CHIẾU RỘNG, NHIỆT ĐỘ MÀU 6500K, IP65, NGUỒN CUNG CẤP 220V AC/50HZ.",
+   "en": ""
+  },
+  "L1": {
+   "vi": "ĐÈN LED TẤM 50.4W, 6800 LUMEN, NHIỆT ĐỘ MÀU 6500K, IP20, NGUỒN CUNG CẤP 220V/50HZ, KHUNG 1200X600mm. 50.",
+   "en": ""
+  },
+  "S8-C": {
+   "vi": "Ổ CẮM CÔNG NGHIỆP 3 PHA 63A-380V, 4P+E. TRẠM XẠC XE HƠI ĐIỆN CÔNG SUẤT \"AC 22kW\" 63A-380V, 4P+E, INDUSTRIAL SOCKET OUTLET. \"AC22kW\" ELECTRICAL CAR CHARGING STATION",
+   "en": ""
+  },
+  "S2-B": {
+   "vi": "Ổ CẮM ĐÔI ĐA DỤNG 25A-240V, 2P+E, LẮP ÂM TƯỜNG TẠI CAO ĐỘ +0.30m (CHO TRẠM SẠC XE MÁY ĐIỆN)",
+   "en": ""
+  },
+  "LH3": {
+   "vi": "ĐÈN CAO ÁP BÓNG LED 88W, 15000 LUMEN, TIA CHIẾU HẸP, NHIỆT ĐỘ MÀU 6500K, IP65, NGUỒN CUNG CẤP 220V AC/50HZ.",
+   "en": ""
+  },
+  "SC3": {
+   "vi": "Ổ CẮM 3 PHA SẠC ĐIỆN XE NÂNG 32A-380V, 4P+E + CẦU DAO CÁCH LY 32A-380V, 4P+E 32A-380V, 4P+E SOCKET OUTLET FORKLIFT CHANGING + 32A-380V, 4P+E ISOLATOR",
+   "en": ""
+  },
+  "SC1": {
+   "vi": "Ổ CẮM 1 PHA SẠC ĐIỆN XE NÂNG 32A-240V, 2P+E + CẦU DAO CÁCH LY 32A-240V, 2P+E 32A-240V, 2P+E SOCKET OUTLET FORKLIFT CHANGING + 32A-240V, 2P+E ISOLATOR",
+   "en": ""
+  },
+  "L2": {
+   "vi": "ĐÈN LED TẤM 46W, 6000 LUMEN, NHIỆT ĐỘ MÀU 6500K, IP54, NGUỒN CUNG CẤP 220V/50HZ, KHUNG 1200X600mm.",
+   "en": ""
+  },
+  "LF": {
+   "vi": "ĐÈN PHA LED 70W, 8400 LUMEN, NHIỆT ĐỘ MÀU 6500K, IP65, NGUỒN CUNG CẤP 220V/50HZ.",
+   "en": ""
+  },
+  "LF1": {
+   "vi": "ĐÈN LED PHA NGOÀI TRỜI 60W, 10200 LUMEN, VỎ NHÔM, NHIỆT ĐỘ MÀU 4000K, IP66, NGUỒN CẤP 220V AC/50HZ.",
+   "en": ""
+  },
+  "LF2": {
+   "vi": "ĐÈN LED PHA NGOÀI TRỜI 150W, 20600 LUMEN, VỎ NHÔM, NHIỆT ĐỘ MÀU 4000K, IP66, NGUỒN CẤP 220V AC/50HZ.",
+   "en": ""
+  },
+  "D3": {
+   "vi": "ĐÈN DOWNLIGHT BÓNG LED 29.3W, 3800 LUMEN, LẮP ÂM TRẦN KÈM NẮP POLYCARBONATE, NHIỆT ĐỘ MÀU 6500K, IP20, NGUỒN CẤP 220V AC/50HZ. 29.",
+   "en": ""
+  },
+  "S2": {
+   "vi": "Ổ CẮM ĐÔI ĐA DỤNG 13A-240V, 2P+E, LẮP ÂM TƯỜNG TẠI CAO ĐỘ +0.30m",
+   "en": "13A-240V, 2P+E, universal duplex socket outlet, recessed wall mounted at +0.30m AFF"
+  },
+  "S3": {
+   "vi": "Ổ CẮM ĐÔI ĐA DỤNG 13A-240V, 2P+E, LẮP ÂM MẶT BÀN",
+   "en": "13A-240V, 2P+E, universal duplex socket outlet, recessed mounted in-ceiling / on desk"
+  },
+  "ISO": {
+   "vi": "CẦU DAO CÁCH LY, CÓ HỘP BẢO VỆ",
+   "en": "Isolator c/w box protection"
+  },
+  "PB": {
+   "vi": "HỘP CẤP NGUỒN BAO GỒM: 1xMCB.3P.32A + 1xMCB.1P.16A + 1xRCCB.4P.40A(30mA) + ổ cắm 16A/230V/1P",
+   "en": "Power box: 1xMCB.3P.32A + 1xMCB.1P.16A + 1xRCCB.4P.40A(30mA) + 16A/230V/1P socket"
+  },
+  "HD": {
+   "vi": "CẤP NGUỒN CHO MÁY SẤY TAY",
+   "en": "Power supply for hand dryer"
+  },
+  "MH": {
+   "vi": "HỐ GA KÉO CÁP (PHẠM VI CÔNG VIỆC CỦA NHÀ THẦU XÂY DỰNG)",
+   "en": "Manhole (civil contractor scope)"
+  },
+  "DB": {
+   "vi": "TUYẾN CÁP BĂNG ĐƯỜNG CHÔN TRONG BÊ TÔNG",
+   "en": "Duct bank"
+  },
+  "JB": {
+   "vi": "HỘP NỐI DÂY, KẾT NỐI VỚI THIẾT BỊ SÀN NÂNG",
+   "en": "Junction box connect with dock leveller equipment"
+  }
+ },
+ "code_order": [
+  "LN1",
+  "LW1",
+  "L1",
+  "L2",
+  "LR1",
+  "LH1",
+  "LH2",
+  "LH3",
+  "D1",
+  "D2",
+  "D3",
+  "LF",
+  "LF1",
+  "LF2",
+  "R1",
+  "EM2H",
+  "EX2H-1M",
+  "EX2H-1M-1MT",
+  "EX2H-1M-2MT",
+  "EX2H-2M-1MT",
+  "EX2H-2M-2MT",
+  "SW1",
+  "SW2",
+  "SW3",
+  "SWA",
+  "ISW",
+  "ISW-WS",
+  "ISO-40A-4P-BW",
+  "DM",
+  "DMF",
+  "SWF",
+  "S2",
+  "S2-wp",
+  "S2-B",
+  "S3",
+  "S5",
+  "S8",
+  "S8-C",
+  "SC1",
+  "SC3",
+  "PB",
+  "HD",
+  "JB",
+  "DL",
+  "ISO",
+  "MH",
+  "DB"
+ ],
+ "group_order": [
+  "Đèn chiếu sáng",
+  "Công tắc",
+  "Ổ cắm",
+  "Isolator / Cầu dao",
+  "Tủ điện / Bảng điện",
+  "Máng cáp - phụ kiện",
+  "Hố ga / Ống ngầm",
+  "Tiếp địa & chống sét",
+  "Báo cháy",
+  "Camera (CCTV)",
+  "Kiểm soát ra vào",
+  "Mạng / Data",
+  "Âm thanh công cộng (PA)",
+  "Máy phát & MBA (phụ kiện)",
+  "Thiết bị điện khác"
+ ],
+ "exclude": {
+  "family_keep": [
+   "Symbol Sampling Smoke Detector"
+  ]
+ },
+ "blocks": [
+  {
+   "family": "^HAS_Philips\\-BN398C\\ LED\\ L1200_Workshop$",
+   "type": "^BN398C\\ LED\\ L1200_Workshop$",
+   "code": "LN1",
+   "group": "Đèn chiếu sáng",
+   "vi": "ĐÈN BATTEN LED 29W, 4100 LUMEN, LẮP NỔI, NHIỆT ĐỘ MÀU 6500K, IP20, NGUỒN CẤP 220V AC/50HZ. (LN1) — nhà xưởng",
+   "en": "LED batten 29W, 4100 lm, surface, 6500K, IP20 (LN1) (workshop) (workshop)"
+  },
+  {
+   "family": "^Conduit\\ Buffer$",
+   "type": "^Conduit\\ Buffer$",
+   "exclude": "Điểm chia tuyến ống luồn do Revit sinh — ống luồn tính theo mét, không đếm cái"
+  },
+  {
+   "family": "^HAS_PHILIPS_CoreLine\\ Highbay_BY121P$",
+   "type": "^1xLED205S_840\\ WB$",
+   "code": "LH2",
+   "group": "Đèn chiếu sáng",
+   "vi": "ĐÈN CAO ÁP BÓNG LED 154W, 21000 LUMEN, TIA CHIẾU RỘNG, NHIỆT ĐỘ MÀU 6500K, IP65, NGUỒN CUNG CẤP 220V AC/50HZ. (LH2)",
+   "en": "LED highbay 154W wide beam"
+  },
+  {
+   "family": "^HAS\\-H\\-Electrical\\ Panel$",
+   "type": "^Generic$",
+   "code": "",
+   "group": "Tủ điện / Bảng điện",
+   "vi": "Tủ điện phân phối / bảng điện (LP, DB, CP)",
+   "en": "Distribution board / local panel"
+  },
+  {
+   "family": "^Symbol\\ Sampling\\ Smoke\\ Detector$",
+   "type": "^Symbol\\ Sampling\\ Smoke\\ Detector$",
+   "code": "",
+   "group": "Báo cháy",
+   "vi": "LỖ THU HỒI KHÍ (ĐIỂM LẤY MẪU) CỦA ĐẦU BÁO KIỂU HÚT ASD — THAM KHẢO, KHÔNG TÍNH GIÁ RIÊNG (BOQ đã gộp trong đơn giá mét \"GI Conduit for ASD (c/w sampling hole)\" = 10.579m)",
+   "en": "SAMPLE HOLE OF ASPIRATING SMOKE DETECTOR - FOR REFERENCE ONLY, priced within the BOQ item \"GI Conduit for ASD (c/w sampling hole)\""
+  },
+  {
+   "family": "^HAS_Philips\\ RC099V\\ G3\\ LED40_840\\ PSU$",
+   "type": "^RC099V\\ G3\\ LED40_840\\ PSU\\ W60L60$",
+   "code": "LR1",
+   "group": "Đèn chiếu sáng",
+   "vi": "ĐÈN LED TẤM 30.7W, 4000 LUMEN, LẮP ÂM TRẦN, NHIỆT ĐỘ MÀU 4000K, IP20, NGUỒN CUNG CẤP 220V/50HZ, KHUNG 600X600mm. 30. (LR1)",
+   "en": "LED panel 600x600 recessed"
+  },
+  {
+   "family": "^HAS_Philips\\ ISF312A\\-H\\ 13W$",
+   "type": "^Philips\\ ISF312A\\-H\\ 13W$",
+   "code": "L1",
+   "group": "Đèn chiếu sáng",
+   "vi": "ĐÈN LED TẤM 50.4W, 6800 LUMEN, NHIỆT ĐỘ MÀU 6500K, IP20, NGUỒN CUNG CẤP 220V/50HZ, KHUNG 1200X600mm. 50. (L1)",
+   "en": "LED panel 50.4W, 6800 lm, 6500K, IP20, 1200x600mm (L1)"
+  },
+  {
+   "family": "^HAS_Waterproof\\ L1260$",
+   "type": "^WT\\ L1260\\ LED\\ 26W$",
+   "code": "LW1",
+   "group": "Đèn chiếu sáng",
+   "vi": "ĐÈN CHỐNG NƯỚC LED 28.6W, 4000 LUMEN, DÀI 1215mm, LẮP NỔI, NHIỆT ĐỘ MÀU 6500K, IP65, NGUỒN CẤP 220V AC/50HZ 28. — WT L1260 LED 26W",
+   "en": "LED waterproof 28.6W, 4000 lm, 1215mm, surface, 6500K, IP65 (LW1) — WT L1260 LED 26W"
+  },
+  {
+   "family": "^HAS_Dc_Exothermic$",
+   "type": "^HAS_Dc_Exothermic$",
+   "code": "",
+   "group": "Tiếp địa & chống sét",
+   "vi": "Mối hàn hóa nhiệt (exothermic welding)",
+   "en": "Exothermic welded joint"
+  },
+  {
+   "family": "^HAS_BodyCamera\\ Indoor_R23$",
+   "type": "^IndoorIPCamera$",
+   "code": "",
+   "group": "Camera (CCTV)",
+   "vi": "Camera IP thân, trong nhà",
+   "en": "Indoor body IP camera"
+  },
+  {
+   "family": "^HAS_Dc_Center_Line_C3$",
+   "type": "^Center_Line$",
+   "exclude": "Nét vẽ, ký hiệu tuyến (không phải thiết bị)"
+  },
+  {
+   "family": "^HAS_Lf_Recessed\\-Downlight$",
+   "type": "^D2$",
+   "code": "D2",
+   "group": "Đèn chiếu sáng",
+   "vi": "ĐÈN DOWNLIGHT BÓNG LED 20W, 2000 LUMEN, LẮP ÂM TRẦN KÈM NẮP POLYCARBONATE, NHIỆT ĐỘ MÀU 6500K, IP20, NGUỒN CẤP 220V AC/50HZ. (D2)",
+   "en": "LED downlight 20W, 2000 lm, recessed c/w PC cover, 6500K, IP20 (D2)"
+  },
+  {
+   "family": "^RHD_Ct_Cabletray\\-Verticaloutsidebend$",
+   "type": "^ELV_System$",
+   "code": "",
+   "group": "Máng cáp - phụ kiện",
+   "vi": "Co đứng ngoài máng cáp ELV",
+   "en": "Cable tray vertical outside bend - ELV"
+  },
+  {
+   "family": "^HAS_Lf_Recessed\\-Downlight$",
+   "type": "^D1$",
+   "code": "D1",
+   "group": "Đèn chiếu sáng",
+   "vi": "ĐÈN DOWNLIGHT BÓNG LED 13W, 1200 LUMEN, LẮP ÂM TRẦN KÈM NẮP POLYCARBONATE, NHIỆT ĐỘ MÀU 6500K, IP20, NGUỒN CẤP 220V AC/50HZ. (D1)",
+   "en": "LED downlight 13W, 1200 lm, recessed c/w PC cover, 6500K, IP20 (D1)"
+  },
+  {
+   "family": "^HAS_E_Socket\\-Duplex_200$",
+   "type": "^S2$",
+   "code": "S2",
+   "group": "Ổ cắm",
+   "vi": "Ổ CẮM ĐÔI ĐA DỤNG 13A-240V, 2P+E, LẮP ÂM TƯỜNG TẠI CAO ĐỘ +0.30m (S2)",
+   "en": "13A-240V, 2P+E, universal duplex socket outlet, recessed wall mounted at +0.30m AFF"
+  },
+  {
+   "family": "^HAS_PHILIPS_CoreLine\\ Highbay_BY121P$",
+   "type": "^1xLED205S_840\\ NB\\ LH1$",
+   "code": "LH1",
+   "group": "Đèn chiếu sáng",
+   "vi": "ĐÈN CAO ÁP BÓNG LED 154W, 21000 LUMEN, TIA CHIẾU HẸP, NHIỆT ĐỘ MÀU 6500K, IP65, NGUỒN CUNG CẤP 220V AC/50HZ. (LH1)",
+   "en": "LED highbay 154W narrow beam"
+  },
+  {
+   "family": "^Spring\\-Kinetics_Noise_Control\\-SRH$",
+   "type": "^SRH\\-4\\-3850$",
+   "exclude": "Thiết bị cơ / đường ống — ngoài phạm vi phần điện"
+  },
+  {
+   "family": "^HAS_PA_15W\\-Wall\\-Horn\\-Speaker$",
+   "type": "^Horn\\ Speaker\\ 15W$",
+   "code": "",
+   "group": "Âm thanh công cộng (PA)",
+   "vi": "Loa còi gắn tường 15W",
+   "en": "15W wall-mounted horn speaker"
+  },
+  {
+   "family": "^HAs_Dd_Data\\-Outlet_R24$",
+   "type": "^Floormounted\\-Duplex$",
+   "code": "",
+   "group": "Mạng / Data",
+   "vi": "Ổ cắm mạng đôi âm sàn",
+   "en": "Floor-mounted duplex data outlet"
+  },
+  {
+   "family": "^HAS_Dc_Hidden_Line_C5$",
+   "type": "^Hidden_Line$",
+   "exclude": "Nét vẽ, ký hiệu tuyến (không phải thiết bị)"
+  },
+  {
+   "family": "^HAS_E_Socket\\-Duplex_200$",
+   "type": "^S3$",
+   "code": "S3",
+   "group": "Ổ cắm",
+   "vi": "Ổ CẮM ĐÔI ĐA DỤNG 13A-240V, 2P+E, LẮP ÂM MẶT BÀN (S3)",
+   "en": "13A-240V, 2P+E, universal duplex socket outlet, recessed mounted in-ceiling / on desk"
+  },
+  {
+   "family": "^Finger$",
+   "type": "^Finger$",
+   "code": "",
+   "group": "Kiểm soát ra vào",
+   "vi": "Đầu đọc vân tay kiểm soát ra vào / chấm công",
+   "en": "Fingerprint access-control / time-attendance reader"
+  },
+  {
+   "family": "^HAS_Philips\\-BN398C\\ LED\\ L1200$",
+   "type": "^BN008C\\ LED\\ L1200$",
+   "code": "",
+   "group": "Đèn chiếu sáng",
+   "vi": "Đèn LED batten BN008C 1200mm",
+   "en": "LED batten BN008C 1200mm"
+  },
+  {
+   "family": "^Elbow\\ \\-\\ Welded\\ \\-\\ Generic$",
+   "type": "^LV$",
+   "code": "",
+   "group": "Hố ga / Ống ngầm",
+   "vi": "Co ống luồn ngầm động lực (LV)",
+   "en": "Underground conduit elbow - LV"
+  },
+  {
+   "family": "^HAS_E_Isolator_HVAC$",
+   "type": "^ISO\\-10A\\-2P$",
+   "code": "ISO",
+   "group": "Isolator / Cầu dao",
+   "vi": "CẦU DAO CÁCH LY, CÓ HỘP BẢO VỆ — ISO-10A-2P",
+   "en": "Isolator c/w box protection — ISO-10A-2P"
+  },
+  {
+   "family": "^R!$",
+   "type": "^$",
+   "code": "R1",
+   "group": "Đèn chiếu sáng",
+   "vi": "ĐÈN ĐƯỜNG BÓNG LED 90W, 14300 LUMEN, 4000K, LẮP TRÊN TRỤ, IP66, DÃY ĐIỆN ÁP HOẠT ĐỘNG RỘNG 100-240VAC. (R1)",
+   "en": "LED street light 90W, 14300 lm, 4000K, on 8000mm pole, IP66 (R1)",
+   "drop_scale_below": 1.0
+  },
+  {
+   "family": "^HAS_E_Power\\-Box$",
+   "type": "^Generic$",
+   "code": "PB",
+   "group": "Ổ cắm",
+   "vi": "HỘP CẤP NGUỒN BAO GỒM: 1xMCB.3P.32A + 1xMCB.1P.16A + 1xRCCB.4P.40A(30mA) + ổ cắm 16A/230V/1P (PB)",
+   "en": "Power box: 1xMCB.3P.32A + 1xMCB.1P.16A + 1xRCCB.4P.40A(30mA) + 16A/230V/1P socket"
+  },
+  {
+   "family": "^BeMayPhatDien$",
+   "type": "^Bệ\\ máy\\ phát\\ 2500Kva$",
+   "code": "",
+   "group": "Máy phát & MBA (phụ kiện)",
+   "vi": "Bệ móng máy phát 2500kVA",
+   "en": "Generator plinth 2500kVA"
+  },
+  {
+   "family": "^M_EF_Manhole\\ Standard$",
+   "type": "^ELV\\ Manhole$",
+   "code": "MH",
+   "group": "Hố ga / Ống ngầm",
+   "vi": "HỐ GA KÉO CÁP (PHẠM VI CÔNG VIỆC CỦA NHÀ THẦU XÂY DỰNG) — ELV Manhole",
+   "en": "Manhole (civil contractor scope) — ELV Manhole"
+  },
+  {
+   "family": "^HAS_E_Socket\\-Charging\\-Industrial_200$",
+   "type": "^SC1$",
+   "code": "SC1",
+   "group": "Ổ cắm",
+   "vi": "Ổ CẮM 1 PHA SẠC ĐIỆN XE NÂNG 32A-240V, 2P+E + CẦU DAO CÁCH LY 32A-240V, 2P+E 32A-240V, 2P+E SOCKET OUTLET FORKLIFT CHANGING + 32A-240V, 2P+E ISOLATOR (SC1)",
+   "en": "Forklift charging socket 1P 32A + isolator"
+  },
+  {
+   "family": "^HAS_E_Socket\\-Charging\\-Industrial_200$",
+   "type": "^SC3$",
+   "code": "SC3",
+   "group": "Ổ cắm",
+   "vi": "Ổ CẮM 3 PHA SẠC ĐIỆN XE NÂNG 32A-380V, 4P+E + CẦU DAO CÁCH LY 32A-380V, 4P+E 32A-380V, 4P+E SOCKET OUTLET FORKLIFT CHANGING + 32A-380V, 4P+E ISOLATOR (SC3)",
+   "en": "Forklift charging socket 3P 32A + isolator"
+  },
+  {
+   "family": "^HAS_E_Hand\\-Dryer_D$",
+   "type": "^Hand\\ Dryer$",
+   "code": "HD",
+   "group": "Ổ cắm",
+   "vi": "CẤP NGUỒN CHO MÁY SẤY TAY (HD)",
+   "en": "Power supply for hand dryer"
+  },
+  {
+   "family": "^HAS_E_Socket\\-Duplex_D$",
+   "type": "^S2\\-B$",
+   "code": "S2-B",
+   "group": "Ổ cắm",
+   "vi": "Ổ CẮM ĐÔI ĐA DỤNG 25A-240V, 2P+E, LẮP ÂM TƯỜNG TẠI CAO ĐỘ +0.30m (CHO TRẠM SẠC XE MÁY ĐIỆN) (S2-B)",
+   "en": "Universal duplex socket 25A recessed wall, e-bike charging (S2-B)"
+  },
+  {
+   "family": "^FL2$",
+   "type": "^$",
+   "code": "LF1",
+   "group": "Đèn chiếu sáng",
+   "vi": "ĐÈN LED PHA NGOÀI TRỜI 60W, 10200 LUMEN, VỎ NHÔM, NHIỆT ĐỘ MÀU 4000K, IP66, NGUỒN CẤP 220V AC/50HZ. (LF1)",
+   "en": "LED outdoor floodlight, mounted at 7000mm (LF1/LF2)",
+   "drop_scale_below": 1.0,
+   "code_from_tags": [
+    "LF1",
+    "LF2"
+   ]
+  },
+  {
+   "family": "^63_PHILIPS_Coreline_tempo_large\\-BVP130_A$",
+   "type": "^63_PHILIPS_Coreline_tempo_large\\-BVP130_A$",
+   "exclude": "Nét bao chi tiết vẽ chồng lên cùng một đèn pha (layer A-DETL-HDLN) — đã tính ở mã LF"
+  }
+ ],
+ "tags": [
+  {
+   "text": "^SW1$",
+   "code": "SW1",
+   "group": "Công tắc"
+  },
+  {
+   "text": "^SW2$",
+   "code": "SW2",
+   "group": "Công tắc"
+  },
+  {
+   "text": "^SW3$",
+   "code": "SW3",
+   "group": "Công tắc"
+  },
+  {
+   "text": "^SWA$",
+   "code": "SWA",
+   "group": "Công tắc"
+  },
+  {
+   "text": "^ISW$",
+   "zones": [
+    "02",
+    "03"
+   ],
+   "code": "ISW",
+   "group": "Isolator / Cầu dao"
+  },
+  {
+   "text": "^IS$",
+   "layer": "EE-SO-EQUI",
+   "roles": [
+    "schedule"
+   ],
+   "sheets": "-01-(00|01)-DR-E-11",
+   "code": "ISW",
+   "group": "Isolator / Cầu dao"
+  },
+  {
+   "text": "^IS$",
+   "layer": "EE-SO-EQUI",
+   "roles": [
+    "schedule"
+   ],
+   "sheets": "-01-XX-DR-E-1111",
+   "code": "ISW-WS",
+   "group": "Isolator / Cầu dao",
+   "vi": "CÔNG TẮC CÁCH LY, 1 CHIỀU 2P 15A - 230VAC (H=+1.2m) (ISW) — nhà xưởng"
+  },
+  {
+   "text": "^IS3$",
+   "layer": "EE-SO-EQUI",
+   "roles": [
+    "schedule"
+   ],
+   "sheets": "-01-XX-DR-E-1111",
+   "code": "ISO-40A-4P-BW",
+   "group": "Isolator / Cầu dao",
+   "vi": "CẦU DAO CÁCH LY 4P 40A, CÓ HỘP BẢO VỆ — cấp cho hộp trích điện busway"
+  }
+ ],
+ "group_notes": [
+  {
+   "pattern": "^(\\d+)\\s*x\\s*ISW$",
+   "code": "ISW",
+   "zones": [
+    "02",
+    "03"
+   ],
+   "circuit_range": true,
+   "group": "Isolator / Cầu dao"
+  }
+ ],
+ "suffix_markers": [
+  {
+   "marker": "^\\(?WP\\)?$",
+   "base_code": "S2",
+   "code": "S2-wp",
+   "group": "Ổ cắm",
+   "vi": "Ổ CẮM ĐÔI ĐA DỤNG 13A-240V, 2P+E, LẮP ÂM TƯỜNG TẠI CAO ĐỘ +0.30m — VỎ BẢO VỆ CHỐNG NƯỚC (S2-wp)"
+  }
+ ],
+ "extra_devices": [
+  "extra/*.csv"
+ ],
+ "dedup": {
+  "tol_mm": 50
+ },
+ "method_notes": [
+  "Cầu dao cách ly khu 01 lấy theo số tuyến trên sơ đồ nguyên lý (gần số tư vấn hơn mặt bằng); khu 02, 03 lấy theo chú thích mặt bằng."
+ ]
+}
